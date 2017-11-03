@@ -1,4 +1,4 @@
-# Employee-FollowUp-App
+# ContactList-App
 
 Rehbere ait kişilerin dinamik olarak eklenip çıkartılabilmesi, güncellemesi ve listelenmesi.
 
