@@ -9,12 +9,23 @@ Etiket ekleme, listeleme, güncelleme.
 Kullanılan Teknolojiler: 
 
 Asp.net MVC 5
+
 EF Code First Migrations
+
 Generic Repository
+
 Unit of Work
+
 Autofac
+
 Dependency Injection
-Jquery, AJAX
+
+Jquery
+
+AJAX
+
 Web Api 2.0
+
 Jquery Datatables
+
 MS SQL Server
