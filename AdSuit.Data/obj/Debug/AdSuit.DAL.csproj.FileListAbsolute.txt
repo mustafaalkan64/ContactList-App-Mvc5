@@ -1,0 +1,13 @@
+c:\users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\bin\Debug\AdSuit.Data.dll.config
+c:\users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\bin\Debug\AdSuit.Data.dll
+c:\users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\bin\Debug\AdSuit.Data.pdb
+c:\users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\bin\Debug\EntityFramework.dll
+c:\users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\bin\Debug\EntityFramework.xml
+c:\users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\obj\Debug\AdSuit.Data.dll
+c:\users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\obj\Debug\AdSuit.Data.pdb
+C:\Users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\obj\Debug\AdSuit.DAL.csprojResolveAssemblyReference.cache
+C:\Users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\obj\Debug\AdSuit.Data.Migrations.Initial.resources
+C:\Users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\obj\Debug\AdSuit.DAL.csproj.GenerateResource.Cache
+C:\Users\mustafa.alkan\documents\visual studio 2015\Projects\AdSuitProject\AdSuit.Data\obj\Debug\AdSuit.Data.Migrations.Initialv1.resources

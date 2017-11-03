@@ -1,0 +1,44 @@
+﻿@model IEnumerable<AdSuit.DAL.Models.Tags>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var successmessage = TempData["successmessage"] ?? string.Empty;
+}
+
+<h2>Tag List</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create", new { @class= "btn btn-primary" })*@
+    <input type="button" class="btn btn-info" value="Create New Tag" onclick="location.href='@Url.Action("Create", "Tags")'" />
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TagName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TagName)
+            </td>
+            <td>
+                <input type="button" class="btn btn-success" value="Edit" onclick="location.href='@Url.Action("Edit", "Tags", new { id = item.Id })'" />
+                <input type="button" class="btn btn-danger" value="Delete" onclick="DeleteTag('@(item.Id)')" />
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script type="text/javascript">
+    var successmessage = '@successmessage';
+    if (successmessage)
+        alert(successmessage);
+</script>
+<script src="~/Scripts/Tag/Tag.js?v=1.2"></script>

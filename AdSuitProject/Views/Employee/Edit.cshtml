@@ -1,0 +1,90 @@
+﻿@model AdSuit.DAL.Models.Employee
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Employee</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "EditEmployeeForm" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Surname, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Tags", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Tag", (IEnumerable<SelectListItem>)ViewBag.Tags, "-- Select a Tag --", new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group" id="TagList" style="display:none;">
+                @Html.Label("Selected Tags", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <h4>
+                        @foreach (var i in Model.EmployeeTags)
+                        {
+                            <span class="label label-warning">@(i.Tag.TagName)<img id="@(i.TagId)_closeimg" class="clssimgbtn" tooltip="@(i.TagId)" src="/Images/close1.png"></span>
+                        }
+                    </h4>
+                </div>
+        </div>
+
+        <div class="form-group" id="ContactTypeDiv">
+            @Html.Label("Contact Types", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ContactType", (IEnumerable<SelectListItem>)ViewBag.ContactTypes, "-- Select a Contact Type --", new { @class = "form-control" })
+            </div>
+        </div>
+
+        @foreach (var i in Model.EmployeeProperties)
+            {
+            <div class="form-group">
+                <label class="control-label col-md-2">@(i.ContactType)</label>
+                <div class="col-md-6"><input class="form-control text-box single-line contactypeclass" data-val="true" data-val-required="This Field Is Required" type="text" id="@(i.ContactType)" name="@(i.ContactType)" value="@(i.Value)"></div>
+                <div class="col-md-2"><img id="Email_closecontactimg" class="clssimgcontactbtn" tooltip="@(i.ContactType)" src="/Images/close1.png"></div>
+                <div class="col-md-2"><span class="field-validation-valid text-danger" data-valmsg-for="@(i.ContactType)" data-valmsg-replace="true"></span></div>
+            </div>
+        }
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default btn-block btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/Employee/Employee.js?v=1.2"></script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script type="text/javascript">
+    InitEditPage();
+</script>
+
